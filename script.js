@@ -1,13 +1,16 @@
+let humanScore=0
+let computerScore=0
+
 // randomly generates rock, paper, or scissors for the computer choice 
 function getComputerChoice() {
-    let choice_num=Math.random()
-    if(choice_num>=0 && choice_num<=.33) {
+    let choiceNum=Math.random()
+    if(choiceNum>=0 && choiceNum<=.33) {
         return "rock"
     }
-    else if(choice_num>.33 && choice_num<=.66) {
+    else if(choiceNum>.33 && choiceNum<=.66) {
         return "paper"
     }
-    else if(choice_num>.66 && choice_num<=1) {
+    else if(choiceNum>.66 && choiceNum<=1) {
         return "scissors"
     }
 }
