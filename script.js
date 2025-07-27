@@ -17,8 +17,29 @@ function getComputerChoice() {
 
 //prompts user for rock, paper, or scissors choice
 function getHumanChoice() {
-    return prompt("Rock, paper, or scissors?")
+    return prompt("Rock, paper, or scissors?").toLowerCase()
 }
 
-console.log(getComputerChoice())
-console.log(getHumanChoice())
+//plays a round of Rock, Paper, Scissors using human & player choices
+function playRound(humanChoice, computerChoice) {
+    if (humanChoice==computerChoice) {
+        console.log("It's a tie!")
+    }
+    else if (humanChoice=="rock" && computerChoice=="scissors" || 
+    humanChoice=="paper" && computerChoice=="rock" || 
+    humanChoice=="scissors" && computerChoice=="paper") {
+        humanScore+=1
+        console.log(`You win! ${humanChoice} beats ${computerChoice}`)
+    }
+    else if (humanChoice=="rock" && computerChoice=="paper" || 
+    humanChoice=="paper" && computerChoice=="scissors" || 
+    humanChoice=="scissors" && computerChoice=="rock") {
+        computerScore+=1
+        console.log(`You lose! ${computerChoice} beats ${humanChoice}`)
+    }
+  }
+  
+const humanSelection = getHumanChoice()
+const computerSelection = getComputerChoice()
+  
+playRound(humanSelection, computerSelection)
