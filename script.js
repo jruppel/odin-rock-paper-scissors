@@ -44,14 +44,15 @@ function playGame() {
         const humanSelection = getHumanChoice()
         const computerSelection = getComputerChoice()
         playRound(humanSelection,computerSelection)
-        console.log(`Human score is ${humanScore}. Computer score is ${computerScore}.`)
+        console.log(`Scores after round ${i+1} - Human: ${humanScore}, Computer: ${computerScore}.`)
     }
     console.log("END GAME")
+    console.log(`Final scores - Human: ${humanScore}, Computer: ${computerScore}`)
     if(humanScore>computerScore) {
-        console.log("Congratulations! You beat the computer in Rock, Paper, Scissors! Refresh the page to try again!")
+        console.log("Congratulations, you beat the computer! Refresh the page to try again!")
     }
-    else if(computerScore<humanScore) {
-        console.log("Looks like the computer won! Better luck next time! Refresh the page to try again!")
+    else if(humanScore<computerScore) {
+        console.log("Better luck next time! Refresh the page to try again!")
     }
     else {
         console.log("You and the computer tied! Refresh the page to try again!")
